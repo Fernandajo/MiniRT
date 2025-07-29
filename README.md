@@ -4,8 +4,12 @@
 **MiniRT** is a lightweight ray tracing engine written in C, developed as part of the 42 school curriculum. It renders 3D scenes described in `.rt` files using basic geometric primitives, realistic lighting, and shading — all built from scratch using only MiniLibX for display.
 
 ---
+<p align="center">
+  <img src="assets/Example1.png" alt="Simple spheres and Plane Scene" width="400"/>
+  </p>
 
-## 📌 Introduction
+---
+## 📌 Project Overview
 
 This project was an opportunity to explore computer graphics from the ground up. It involved implementing a full rendering pipeline without relying on external libraries — just vectors, math, and system-level C code.
 
@@ -32,6 +36,18 @@ The result is a real-time, windowed ray tracer capable of interpreting a scene f
 - 🪟 Output rendered in a MiniLibX window
 
 ---
+## 📸 Screenshots
+
+Here are a few example renders created with MiniRT:
+<p align="center">
+  <img src="assets/Example2.png" alt="Multiple spheres and cylinder Scene" width="600"/>
+</p>
+
+<p align="center">
+  <img src="assets/Example3.png" alt="Simple sphere, testing lights" width="400"/>
+</p>
+
+
 
 ## 📂 Example Scene (`.rt` format)
 
