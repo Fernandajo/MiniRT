@@ -5,7 +5,7 @@
 
 ---
 <p align="center">
-  <img src="assets/Example1.png" alt="Simple spheres and Plane Scene" width="400"/>
+  <img src="assets/Example1.jpeg" alt="Simple spheres and Plane Scene" width="400"/>
   </p>
 
 ---
@@ -44,7 +44,7 @@ Here are a few example renders created with MiniRT:
 </p>
 
 <p align="center">
-  <img src="assets/Example3.png" alt="Simple sphere, testing lights" width="400"/>
+  <img src="assets/Example3.jpeg" alt="Simple sphere, testing lights" width="400"/>
 </p>
 
 
