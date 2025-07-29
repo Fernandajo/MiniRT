@@ -1,35 +1,60 @@
+# 🌟 MiniRT  
+>_A minimal ray tracer in C_
 
-Title: The name of your project.
-# 42-miniRT
-
-miniRT is a project from the 4th circle of The Core Curriculum in 42 Berlin. The purpose of this project is to dwelve deeper into
-graphical programming by developing a basic Raytracing program using minilibx. In our implementation of miniRT,
-we've referenced Pathtracing and made a functional bare bones program with basic controls for manipulating the scene.
+**MiniRT** is a lightweight ray tracing engine written in C, developed as part of the 42 school curriculum. It renders 3D scenes described in `.rt` files using basic geometric primitives, realistic lighting, and shading — all built from scratch using only MiniLibX for display.
 
 ---
-# Installation
 
-1.	Check dependencies and install missing ones
-		The project requires:
-		-	XShm extension must be present (package libxext-dev)
-		-	minilibx dependencies
-		-	Utility functions from BSD systems - development files (package libbsd-dev)
-		-	X11 include files (package xorg)
+## 📌 Introduction
 
-1.5	If missing any dependencies
-		`sudo apt-get install xorg`
-		`sudo apt-get install libxcb1-dev libx11-xcb-dev libxext-dev libbsd-dev`
-		`sudo apt-get install libx11-dev libxext-dev libbsd-dev libxrandr-dev libxi-dev`
-		`sudo apt-get install libxpm-dev`
+This project was an opportunity to explore computer graphics from the ground up. It involved implementing a full rendering pipeline without relying on external libraries — just vectors, math, and system-level C code.
 
-2.	Compile with make
-	-	`make`
+The result is a real-time, windowed ray tracer capable of interpreting a scene files and rendering them with ambient, diffuse, and specular lighting.
 
-Usage: Instructions for using the project.
 ---
-Features: Key highlights.
+
+## 🧠 Features
+
+- 🧾 **Scene parsing** from plain `.rt` files
+- 📸 **Camera** with adjustable position, orientation, and FOV
+- 💡 **Lighting system**:
+  - Ambient light
+  - Point light(s) with RGB color and brightness
+- 🔷 **Geometric primitives**:
+  - Spheres
+  - Planes
+  - Cylinders
+- 🎨 **Phong shading** with ambient, diffuse, and specular components
+- 🌑 **Shadows**
+  - Reflections
+  - Textures or patterns
+  - Camera movement or anti-aliasing
+- 🪟 Output rendered in a MiniLibX window
+
 ---
-Contributing: Guidelines for contributors.
-License: Licensing information.
+
+## 📂 Example Scene (`.rt` format)
+
+```txt
+A 0.2 255,255,255          # Ambient light
+C 0,0,0 0,0,1 70           # Camera (pos, dir, FOV)
+L -40,0,30 0.7 255,255,255 # Point light
+sp 0,0,20 20 255,0,0       # Sphere
+pl 0,-30,0 0,1,0 0,255,0   # Plane
+cy 50,0,20 0,1,0 14.2 21.42 10,0,255 # Cylinder
+```
 ---
-Acknowledgments: Optional credits.
+
+## 🛠️ Building the Project
+
+To compile the project, simply run:
+
+```bash
+git clone https://github.com/Fernandajo/MiniRT.git
+cd MiniRT
+make
+```
+To render a scene:
+
+```bash
+./miniRT scenes/example.rt
